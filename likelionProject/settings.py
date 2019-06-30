@@ -11,6 +11,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts.apps.AccountsConfig',
     'animalShop.apps.AnimalshopConfig',
     'animalGoods.apps.AnimalgoodsConfig',
     'kindAnimal.apps.KindanimalConfig',
@@ -104,7 +105,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'kindAnimal', 'static'),
     os.path.join(BASE_DIR, 'mainPage', 'static'),
     os.path.join(BASE_DIR, 'animalGoods', 'static'),
-    os.path.join(BASE_DIR, 'animalShop', 'static')
+    os.path.join(BASE_DIR, 'animalShop', 'static'),
+    os.path.join(BASE_DIR, 'accounts', 'static')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

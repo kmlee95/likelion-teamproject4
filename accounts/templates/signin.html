@@ -1,0 +1,34 @@
+{% extends 'base.html' %}<!--메뉴 가져오기 위해-->
+
+{% block import %}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "css/signin.css" %}" >
+{% endblock %}
+
+{% block contents %}
+    <br>
+    <div style="text-align:center">
+        <h2>Sign in to Likelion & Team</h2>
+    </div>
+
+    <div class="container">
+        <div>
+            <form class="signUp" id="signupForm">
+                <h1 class="signUpTitle">
+                <img class="catsize" src="{% static 'assets/signcat.png' %}" alt="">
+                 Sign in 
+                <img class="dogsize" src="{% static 'assets/signdog.png' %}" alt="">
+                </h1>
+                <div>
+                    <input type="text" class="signUpInput" placeholder="Type your username" autofocus required>
+                    <input type="password" class="signUpInput" placeholder="Choose a password" required>
+                    <input type="submit" value="Login start!" class="signUpButton">
+                </div>
+                <div class="singupButton">
+                    <button type="button" class="btn btn-secondary">SignUp</button>
+                </div>
+            </form>
+        </div>
+       
+    </div>
+{% endblock %}

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 import kindAnimal.views
 import mainPage.views
 import animalGoods.views
@@ -11,4 +11,5 @@ urlpatterns = [
     path('kindAnimal/', kindAnimal.views.kindAnimal, name='kindAnimal'),
     path('animalGoods/', animalGoods.views.animalGoods, name='animalGoods'),
     path('animalShop/', animalShop.views.animalShop, name='animalShop'),
+    path('accounts/', include('accounts.urls')),
 ]
