@@ -23,6 +23,10 @@ ul {
 }
 
 /* HEADER */
+#nvbBrand {
+  color: black;
+  text-decoration: none;
+}
 .header-area {
   position: relative;
   top: 0;
@@ -120,7 +124,7 @@ ul {
 }
 
 .header-area > .nvb > .nvb-m.show {
-  height: 200px;
+  height: 210px;
 }
 
 .header-area > .nvb > .nvb-m > .nav-item {

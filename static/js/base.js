@@ -29,5 +29,5 @@ function scrollFunction() {
 function menuToggle() {
   document.getElementById("menu").classList.toggle("show");
 }
-console.log("hi");
+
 document.getElementById("toggleBtn").addEventListener("click", menuToggle);

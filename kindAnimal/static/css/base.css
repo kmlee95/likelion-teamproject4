@@ -23,6 +23,10 @@ ul {
 }
 
 /* HEADER */
+#nvbBrand {
+  color: black;
+  text-decoration: none;
+}
 .header-area {
   position: relative;
   top: 0;

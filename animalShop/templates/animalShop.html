@@ -1,0 +1,12 @@
+{% extends 'base.html' %}<!--메뉴 가져오기 위해-->
+
+{% block import %}<!--css파일 import 부분, 해당 폴더 안에있는 static 파일에서 작업-->
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "css/animalShop.css" %}" >
+{% endblock %}
+
+{% block contents %}<!--여기 안에다 코딩 해주시면 됩니다.-->
+    <div class="container">
+        <h1>animalShop</h1>
+    </div>
+{% endblock %}

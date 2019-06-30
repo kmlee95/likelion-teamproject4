@@ -11,7 +11,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'animalShop.apps.AnimalshopConfig',
+    'animalGoods.apps.AnimalgoodsConfig',
     'kindAnimal.apps.KindanimalConfig',
+    'mainPage.apps.MainpageConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -98,7 +101,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'kindAnimal', 'static')
+    os.path.join(BASE_DIR, 'kindAnimal', 'static'),
+    os.path.join(BASE_DIR, 'mainPage', 'static'),
+    os.path.join(BASE_DIR, 'animalGoods', 'static'),
+    os.path.join(BASE_DIR, 'animalShop', 'static')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
