@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Likelion blog</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        
+        <!-- icon -->
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+        <!-- fonts -->
+	    <link href="https://fonts.googleapis.com/css?family=Heebo|Noto+Sans+KR" rel="stylesheet">
+
+        <!--static file을 간단히 불러오기 위해 사용-->
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static "css/base.css" %}" >
+        
+
+        {% block import %}
+        {% endblock %}
+    </head>
+    <body>
+        <header class="header-area nvb-fade" id="header">
+            <nav class="nvb">
+                <a class="nvb-brand" id="nvbBrand">LIKELIONS</a>
+                <a class="nvb-toggler" id="toggleBtn"><i class="fa fa-bars"></i></a>
+                <div class="nvb-m" id="menu">
+                    <div class="nav-item"><a class="nav-link" id="nvbAbout" href="/">Kind</a></div>
+				    <div class="nav-item"><a class="nav-link" id="nvbService">Personal</a></div>
+				    <div class="nav-item"><a class="nav-link" id="nvbPortfolio">Animal goods</a></div>
+				    <div class="nav-item"><a class="nav-link" id="nvbReview">Animal Shop</a></div>
+                </div>
+            </nav>
+        </header>
+
+        {% block contents %}
+        {% endblock %}
+    </body>
+    <script src="{% static "js/base.js" %}" ></script>
+</html>
