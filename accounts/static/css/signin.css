@@ -1,3 +1,12 @@
+.btn-facebook {
+  background-color: #405d9d;
+  color: #fff;
+}
+.btn-twitter {
+  background-color: #42aeec;
+  color: #fff;
+}
+
 .catsize {
   width: 60px;
   height: auto;
@@ -6,11 +15,13 @@
   width: 40px;
   height: auto;
 }
+
 .singupButton {
   position: relative;
   text-align: right;
   margin-top: 1.2rem;
 }
+
 .signUp {
   position: relative;
   margin: 50px auto;
@@ -100,25 +111,6 @@
     #62c2e4 87.5%,
     #62c2e4
   );
-  background-image: -o-linear-gradient(
-    left,
-    #c4e17f,
-    #c4e17f 12.5%,
-    #f7fdcc 12.5%,
-    #f7fdca 25%,
-    #fecf71 25%,
-    #fecf71 37.5%,
-    #f0776c 37.5%,
-    #f0776c 50%,
-    #db9dbe 50%,
-    #db9dbe 62.5%,
-    #c49cde 62.5%,
-    #c49cde 75%,
-    #669ae1 75%,
-    #669ae1 87.5%,
-    #62c2e4 87.5%,
-    #62c2e4
-  );
   background-image: linear-gradient(
     to right,
     #c4e17f,
@@ -196,30 +188,4 @@ input {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-}
-
-:-moz-placeholder {
-  color: #aaaaaa;
-  font-weight: 300;
-}
-
-::-moz-placeholder {
-  color: #aaaaaa;
-  opacity: 1;
-  font-weight: 300;
-}
-
-::-webkit-input-placeholder {
-  color: #aaaaaa;
-  font-weight: 300;
-}
-
-:-ms-input-placeholder {
-  color: #aaaaaa;
-  font-weight: 300;
-}
-
-::-moz-focus-inner {
-  border: 0;
-  padding: 0;
 }
