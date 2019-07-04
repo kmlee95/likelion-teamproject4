@@ -11,6 +11,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'personal.apps.PersonalConfig',
     'accounts.apps.AccountsConfig',
     'animalShop.apps.AnimalshopConfig',
     'animalGoods.apps.AnimalgoodsConfig',

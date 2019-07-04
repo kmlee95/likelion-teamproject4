@@ -34,7 +34,7 @@
 				    <div class="nav-item"><a class="nav-link" id="nvbReview" href="{% url 'animalShop' %}" >Animal Shop</a></div>
 
                     {% if user.is_authenticated %}
-                        <div class="nav-item"><a class="nav-link" id="nvbService">Personal</a></div>
+                        <div class="nav-item"><a class="nav-link" id="nvbService" href="{% url 'personal' %}">Personal</a></div>
                         <div class="nav-item"><a class="nav-link" id="nvbSignIn">{{  user.profile.users }} 님</a></div>
                         <div class="nav-item"><a class="nav-link" id="nvbSignUp" href="javascript:{document.getElementById('logout').submit()}" >logout</a></div>
                         <form id="logout" method="POST" action="{% url 'logout'%}">
