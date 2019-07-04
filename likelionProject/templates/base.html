@@ -30,11 +30,21 @@
                 <a class="nvb-toggler" id="toggleBtn"><i class="fa fa-bars"></i></a>
                 <div class="nvb-m" id="menu">
                     <div class="nav-item"><a class="nav-link" id="nvbAbout" href="{% url 'kindAnimal' %}">Kind</a></div>
-				    <div class="nav-item"><a class="nav-link" id="nvbService">Personal</a></div>
 				    <div class="nav-item"><a class="nav-link" id="nvbPortfolio" href="{% url 'animalGoods' %}" >Animal goods</a></div>
 				    <div class="nav-item"><a class="nav-link" id="nvbReview" href="{% url 'animalShop' %}" >Animal Shop</a></div>
-                    <div class="nav-item"><a class="nav-link" id="nvbSignIn" href="{% url 'signin' %}" >SignIn</a></div>
-                    <div class="nav-item"><a class="nav-link" id="nvbSignUp" href="{% url 'signup' %}" >SignUp</a></div>
+
+                    {% if user.is_authenticated %}
+                        <div class="nav-item"><a class="nav-link" id="nvbService">Personal</a></div>
+                        <div class="nav-item"><a class="nav-link" id="nvbSignIn">{{  user.profile.users }} 님</a></div>
+                        <div class="nav-item"><a class="nav-link" id="nvbSignUp" href="javascript:{document.getElementById('logout').submit()}" >logout</a></div>
+                        <form id="logout" method="POST" action="{% url 'logout'%}">
+                            {% csrf_token %} 
+                            <input type="hidden" />
+                        </form>
+                    {% else %}
+                        <div class="nav-item"><a class="nav-link" id="nvbSignIn" href="{% url 'signin' %}" >SignIn</a></div>
+                        <div class="nav-item"><a class="nav-link" id="nvbSignUp" href="{% url 'signup' %}" >SignUp</a></div>
+                    {% endif %}
                 </div>
             </nav>
         </header>

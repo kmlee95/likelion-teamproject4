@@ -18,17 +18,18 @@
                 <h4 class="card-title mt-3 text-center">Sign in</h4>
                 <p class="text-center">Get started Login</p>
                 <p>
-                    <a href="" class="btn btn-block btn-outline-info"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
-                    <a href="" class="btn btn-block btn-outline-primary"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
+                    <a href="" class="btn btn-block btn-outline-info"> <i class="fab fa-twitter"></i>   Login Twitter</a>
+                    <a href="" class="btn btn-block btn-outline-primary"> <i class="fab fa-facebook-f"></i>   Login facebook</a>
                 </p>
                 <hr>
-                <form>
+                <form method="POST" action="{% url 'signin' %}">
+                {% csrf_token %}
                    	<div class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                             </div>
-                            <input name="" class="form-control" placeholder="Email or login" type="email">
+                            <input name="username" class="form-control" placeholder="Email or login" type="email">
                         </div> 
                     </div> 
 
@@ -37,7 +38,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                             </div>
-                            <input class="form-control" placeholder="******" type="password">
+                            <input name="password" class="form-control" placeholder="******" type="password">
                         </div> 
                     </div> 
                     <div class="row">
@@ -47,7 +48,7 @@
                             </div> 
                         </div>
                         <div class="col-md-6 text-right">
-                            <a href="" class="float-right btn btn-outline-primary">Sign up</a>
+                            <a href="{% url 'signup' %}" class="float-right btn btn-outline-primary">Sign up</a>
                         </div>                                            
                     </div>                                                                  
                 </form>
