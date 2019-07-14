@@ -1,11 +1,440 @@
 {% extends 'base.html' %}
 {% block import %}
     {% load staticfiles %}
-    <link rel="stylesheet" href="{% static "css/mainPage.css" %}" >
+    <link rel="stylesheet" href="{% static 'css/mainPage.css' %}?ver=1" >
+    
 {% endblock %}
 
 {% block contents %}
-    <div class="container">
-        <h1>mainPage</h1>
-    </div>
+<div>
+    <section>
+        <div class="main img-fluid">
+            <div class="container">
+                <div class="section-align mx-5">
+                    <div class="main-content mt-5">
+                        <div class="col-md-6">
+                            <h2 class="font-weight-bolder">Your Story Starts With Us</h2>
+                        </div>
+                        <div class="col-md-5" style="font-size:1.2rem">
+                                <p>짤막한 카페 설명 넣을 예정입니다. 카페 메뉴 구성은 대략 ~
+                                반려동물 종류~, 반려동물 shop 과 food, Map 등등
+                            </p>
+                            <button type="button" class="ml-3 px-4 py-2 btn btn-danger">
+                                <i class="fas fa-caret-right mr-1"></i>
+                                관련 비디오 넣을 예정
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+    <!--Main Section End-->
+
+    <!--Mid section Start-->
+<div>
+    <section>
+        <div class="mid mx-4 shadow p-3 mb-0 bg-white rounded">
+            <div class="col-md-10 mx-auto">
+                <div class="container">
+                <div id="product" class="col-md-6 mx-auto">
+                    <div class="text-center mt-5 mb-5">
+                        <div class="product-title font-weight-bold sectionheader">
+                            <h3>Let's Talk(Cafe 만든 이유)</h3>
+                        </div>
+                        <div class="product-description text-muted">
+                            The number of dogs and cats abandoned on the street is greater than I thought. 
+                            Of course organic animal shelters can encourage abandoned animals to meet good owners and be adopted, 
+                            but pet cafes can also encourage them. Some of the customers who visit the café have grown fond of their 
+                            pets and even adopted them. 
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Product Detail--> 
+        <div class="mt-5 pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 p-0">
+                        <div class="text-center">
+                            <figure class="pt-3">
+                                <i class="fas fa-cat mb-4 comments-icon"></i>
+                            </figure>
+                            <div>
+                                <h5 class="font-weight-bold">Animal Kind</h5>
+                            </div>
+                            <div class="text-muted px-2 detail-description">
+                                <p>Animal Kind Veterinary Hospital strives to offer fun, safe and reasonable priced boarding and 
+                                daycare for both cats and dogs. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 p-0">
+                        <div class="text-center">
+                            <figure class="pt-3">
+                                <i class="fas fa-gift mb-4 user-check-icon"></i>
+                            </figure>
+                            <div>
+                                <h5 class="font-weight-bold">Animal Goods</h5>
+                            </div>
+                            <div class="text-muted px-2 detail-description">
+                                <p>Animal Kind Veterinary Hospital strives to offer fun, safe and reasonable priced boarding and 
+                                daycare for both cats and dogs. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-0">
+                        <div class="text-center">
+                            <figure class="pt-3">
+                                <i class="fas fa-store mb-4 fingerprint-icon"></i>
+                            </figure>
+                            <div>
+                                <h5 class="font-weight-bold">Animal Shop</h5>
+                            </div>
+                            <div class="text-muted px-2 detail-description">
+                                <p>Animal Kind Veterinary Hospital strives to offer fun, safe and reasonable priced boarding and 
+                                daycare for both cats and dogs. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--end-->
+        </br>
+
+        <!--picture-->
+        <section id="gallery" class="text-center py-5">
+            <div class="container">
+                <h2 class="h1-responsive font-weight-bold mb-5">Animal Pictures</h2>
+                <p class="grey-text w-responsive mx-auto mb-5">This page provides you with a broad range of free to use animal pictures. 
+                All animal images are licensed under the free Pexels license and 
+                can be downloaded for free and even be used for commercial purposes. This is the selection of 
+                the best animal pictures on Pexels..</p>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="mdb-lightbox-ui"></div>
+                        <div class="mdb-lightbox">
+                             <div class="row">
+                                <figure class="col-md-4">
+                                        <img src="{% static 'assets/main1.jpg' %}"
+                                            class="img-fluid z-depth-1-half">
+                                    </a>
+                                </figure>
+                                <figure class="col-md-4">
+                                        <img src="{% static 'assets/main2.jpg' %}"
+                                            class="img-fluid z-depth-1-half" />
+                                    </a>
+                                </figure>
+                                <figure class="col-md-4">
+                                        <img src="{% static 'assets/main3.jpg' %}"
+                                            class="img-fluid z-depth-1-half" />
+                                    </a>
+                                </figure>
+                            
+                           
+                                <figure class="col-md-4">
+                                        <img src="{% static 'assets/main4.jpg' %}"
+                                            class="img-fluid z-depth-1-half" />
+                                    </a>
+                                </figure>
+
+                                <figure class="col-md-4">
+                                        <img src="{% static 'assets/main9.jpg' %}"
+                                            class="img-fluid z-depth-1-half" />
+                                    </a>
+                                </figure>
+
+                                <figure class="col-md-4">
+                                        <img src="{% static 'assets/main5.jpg' %}"
+                                            class="img-fluid z-depth-1-half" />
+                                    </a>
+                                </figure>
+
+                                <figure class="col-md-4">
+                                        <img src="{% static 'assets/main6.jpg' %}"
+                                            class="img-fluid z-depth-1-half" />
+                                    </a>
+                                </figure>
+
+                                <figure class="col-md-4">
+                                        <img src="{% static 'assets/main7.jpg' %}"
+                                            class="img-fluid z-depth-1-half" />
+                                    </a>
+                                </figure>
+
+                                <figure class="col-md-4">
+                                        <img src="{% static 'assets/main8.jpg' %}"
+                                            class="img-fluid z-depth-1-half" />
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Container -->
+
+        </section>
+        <!--picture end-->
+
+        <!--Our Team-->
+        <div id="team" class="our-team">
+            <div class="container mx-auto">
+                <div class="text-center mt-5 mb-5 sectionheader">
+                    <h3 class="font-weight-bold">Here is our team(개발 팀원 소개 어떤가요?)</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-10 mx-auto">
+            <div class="team members pb-3">
+                <div class="row">
+
+                    <!--1-->
+                    <div class="col-md-6">
+                        <div class="mb-3 text-center">
+                            <div class="media">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <figure>
+                                            <img class="img-fluid mr-4 shadow  mb-2 bg-white rounded" src="{% static 'assets/adult-boy-casual-220453.jpg' %}" alt="">
+                                        </figure>
+                                    </div>
+                                
+                                    <div class="col-md-8">
+                                        <div class="media-body">
+                                            <div class="team-member-name mt-0">
+                                                <h6 class="font-weight-bold">경민</h6>
+                                            </div>
+                                            <div class="member-designation mt-0">
+                                                    <p class="small text-muted">Computer Engineering</p>
+                                            </div>
+                                            <div class="member-description">
+                                                <p class="small text-muted">Are you successful in making cafes Like lion (animal Cafe)? 
+                                                Let's go, let's go!</p>
+                                            </div>
+                                            <div class="member-socialmedia">
+                                                <p><i class="fab fa-twitter ml-3"></i><i
+                                                        class="fab fa-facebook-square ml-3"></i><i
+                                                        class="fab fa-google ml-3"></i></p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                
+                    <!--2-->
+                    <div class="col-md-6">
+                        <div class="mb-3 text-center">
+                            <div class="media">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <figure>
+                                            <img class="img-fluid shadow  mb-2 bg-white rounded" src="{% static 'assets/person.png' %}" alt="">
+                                            
+                                        </figure>
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <div class="media-body">
+                                            <div class="team-member-name mt-0">
+                                                <h6 class="font-weight-bold">하은</h6>
+                                            </div>
+                                            <div class="member-designation mt-0">
+                                                <p class="small text-muted">전공</p>
+                                            </div>
+                                            <div class="member-description">
+                                                <p class="small text-muted">Are you successful in making cafes Like lion (animal Cafe)? 
+                                                Let's go, let's go!</p>
+                                            </div>
+                                            <div class="member-socialmedia">
+                                                <p><i class="fab fa-linkedin-in ml-3"></i></i>
+                                                    <i class="fab fa-facebook-square ml-3"></i>
+                                                    <i class="fas fa-basketball-ball ml-3"></i>
+                                                    <i class="fab fa-google ml-3"></i>
+                                                </p>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--3-->
+                    <div class="col-md-6">
+                    <div class="mb-3 text-center">
+                        <div class="media">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <figure>
+                                        <img class="img-fluid shadow  mb-2 bg-white rounded" src="{% static 'assets/person.png' %}" alt="">
+                                    </figure>
+                                </div>
+
+                                <div class="col-md-8">
+                                    <div class="media-body">
+                                        <div class="team-member-name mt-0">
+                                            <h6 class="font-weight-bold">소연</h6>
+                                        </div>
+                                        <div class="member-designation mt-0">
+                                            <p class="small text-muted">전공</p>
+                                        </div>
+                                        <div class="member-description">
+                                            <p class="small text-muted">Are you successful in making cafes Like lion (animal Cafe)? 
+                                                Let's go, let's go!</p>
+                                        </div>
+                                        <div class="member-socialmedia">
+                                            <p><i class="fab fa-youtube ml-3"></i></i>
+                                                <i class="fab fa-twitter ml-3"></i></i>
+                                                <i class="fab fa-instagram ml-3"></i></i>
+                                            </p>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+                    <!--4-->
+                    <div class="col-md-6">
+                        <div class="mb-3 text-center">
+                            <div class="media">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <figure>
+                                            <img class="img-fluid shadow  mb-2 bg-white rounded" src="{% static 'assets/person.png' %}" alt="">
+                                        </figure>
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <div class="media-body">
+                                            <div class="team-member-name mt-0">
+                                                <h6 class="font-weight-bold">희진</h6>
+                                            </div>
+                                            <div class="member-designation mt-0">
+                                                <p class="small text-muted">전공</p>
+                                            </div>
+                                            <div class="member-description">
+                                                <p class="small text-muted">Are you successful in making cafes Like lion (animal Cafe)? 
+                                                Let's go, let's go!</p>
+                                            </div>
+                                            <div class="member-socialmedia">
+                                                <p><i class="fab fa-linkedin-in ml-3"></i>
+                                                    <i class="fab fa-facebook-square ml-3"></i>
+                                                    <i class="fab fa-google ml-3"></i>
+                                                </p>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--end-->
+                </div>
+
+            </div>
+
+
+        </div>
+        <!--Work with us-->
+        
+        <div id="contact us" class="col-md-6 mx-auto">
+                <div clas="container">
+            <div class="mainsection text-center mt-5 mb-5">
+                <div class="work-title mb-5 header">
+                    <h3 class="font-weight-bold">Work with us</h3>
+                </div>
+                <div class="content workcolor small">
+                    Divide details about your product or agency work into parts. 
+                    Write a fewlines about each one bout each one and contact us about any further collaboration. 
+                    We will respond getback to you in a couple of hours.
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <form>
+                <div class="container">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            
+                            <input type="text" class="form-control" placeholder="Your Name">
+
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Your Email">
+                        </div>
+                    
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="workcolor">
+                                <label for="Your Message">Your Message</label>
+                                <textarea class="form-control" rows="1" placeholder="" id="Your Message"
+                                    name="text"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+            </form>
+
+        </div>
+
+            <div>
+                <div class="mt-3 text-center">
+                    <button type="button" class="btn p-2 px-3 sendbtn">Send Message</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!--Mid Section End-->
+
+<!--Footer Start-->
+<div>
+    <section>
+        <div class="footer px-5 mx-5 mt-3 text-center">
+            <a href="#">Home</a>
+            <a href="#">Animal Kind</a>
+            <a href="#">Animal Goods</a>
+            <a href="#">Animal Shop</a>
+            <div class="copyright">
+                <p>&copy 2019, made with ❤ by<a href="#"> LikeLions Team</a> for a better web.</p>
+            </div>
+
+        </div>
+
+    </section>
+</div>
+<!--Footer End-->
+
 {% endblock %}

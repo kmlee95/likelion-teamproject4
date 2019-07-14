@@ -1,3 +1,253 @@
-h1 {
-  color: blue;
+/* Main Section */
+.main {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/mainPanel.jpg");
+  background-size: cover;
+  height: 650px;
+  background-position: center;
+}
+
+.div-position {
+  margin-top: -48px;
+}
+
+.main-content {
+  color: #fff;
+  padding-top: 115px;
+}
+
+.section-align {
+  margin-top: -48px;
+}
+
+.contentnew {
+  margin-top: -48px;
+}
+
+.main-content button {
+  font-size: 13px;
+  color: #fff;
+}
+
+.btn-danger {
+  color: #f3051c;
+  background-color: #f3051c;
+  border-color: #f3051c;
+  margin-left: 1rem;
+}
+
+.member-socialmedia .ml-3,
+.mx-3 {
+  margin-left: 1rem !important;
+}
+
+button.ml-3,
+.mx-3 {
+  margin-left: 0rem !important;
+}
+
+/* Product-detail */
+.comments-icon {
+  color: #24bcd4;
+  font-size: 40px;
+}
+
+.user-check-icon {
+  color: #4caf4f;
+  font-size: 40px;
+}
+
+.fingerprint-icon {
+  color: #f44337;
+  font-size: 40px;
+}
+
+.detail-description {
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* Our Team */
+.team-members {
+  color: #3c4857;
+}
+
+.media {
+  padding: -0.5rem !important;
+}
+
+.fa-linkedin-in {
+  color: #0975b4;
+}
+
+.fa-youtube {
+  color: #e52d27;
+}
+
+.fa-twitter {
+  color: #55acee;
+}
+
+.fa-instagram {
+  color: #205f8e;
+}
+
+.fa-facebook-square {
+  color: #3b5898;
+}
+
+.fa-google {
+  color: #dd4b3a;
+}
+
+.fa-basketball-ball {
+  color: #dd4b3a;
+}
+
+.ml-3,
+.mx-3 {
+  margin-left: 1rem !important;
+}
+
+.media .img-fluid {
+  height: 200px;
+}
+
+/* Middle */
+.mid {
+  position: relative;
+  margin: -120px;
+}
+
+/* Work With Us */
+.sendbtn {
+  background-color: #9c2ab0;
+  border-color: #9c2ab0;
+  font-size: 12px;
+  outline: none;
+  color: white;
+  border-radius: 4px;
+}
+
+.sendbtn:hover {
+  background-color: #9c2ab0;
+  border-color: #9c2ab0;
+  color: #ffffff;
+  outline: none;
+  border-radius: 4px;
+}
+
+.sendbtn:focus {
+  background-color: #9c2ab0;
+  border-color: #9c2ab0;
+  outline: none;
+  border-radius: 4px;
+}
+
+.workcolor {
+  color: #969696;
+  padding: 5px 0;
+}
+
+.form-control {
+  border-bottom: 1px solid #969696 !important;
+  border: none;
+  border-radius: 0 !important;
+}
+
+.header {
+  color: #3c4857;
+}
+
+/* Footer */
+.footer {
+  overflow: hidden;
+}
+
+.footer > a {
+  float: left;
+  color: #3c4857;
+  text-align: center;
+  padding: 2px 10px;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.footer p {
+  float: right;
+  color: #3c4857;
+  text-align: center;
+  padding: 2px 10px;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.footer p a {
+  text-decoration: none;
+}
+
+.rgba-gradient {
+  background: rgba(35, 7, 77, 0.6);
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(204, 83, 51, 0.6),
+    rgba(35, 7, 77, 0.6)
+  );
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    rgba(204, 83, 51, 0.6),
+    rgba(35, 7, 77, 0.6)
+  );
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.img-gradient:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, rgba(220, 66, 37, 0.5)),
+    color-stop(100%, rgba(0, 47, 75, 0.5))
+  );
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 47, 75, 0.5) 0%,
+    rgba(220, 66, 37, 0.5) 100%
+  );
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    top,
+    rgba(0, 47, 75, 0.5) 0%,
+    rgba(220, 66, 37, 0.5) 100%
+  );
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 47, 75, 0.5)),
+    to(rgba(220, 66, 37, 0.5))
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 47, 75, 0.5) 0%,
+    rgba(220, 66, 37, 0.5) 100%
+  );
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002f4b', endColorstr='#00000000', GradientType=0);
+  /* IE6-9 */
 }

@@ -5,6 +5,8 @@ import mainPage.views
 import animalGoods.views
 import animalShop.views
 import personal.views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -15,3 +17,4 @@ urlpatterns = [
     path('personal/', personal.views.personal, name='personal'),
     path('accounts/', include('accounts.urls')),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
