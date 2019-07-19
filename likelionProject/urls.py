@@ -15,6 +15,10 @@ urlpatterns = [
     path('animalGoods/', animalGoods.views.animalGoods, name='animalGoods'),
     path('animalShop/', animalShop.views.animalShop, name='animalShop'),
     path('personal/', personal.views.personal, name='personal'),
+    path('personal/<int:personal_id>/', personal.views.detail, name = 'detail'),
+    path('personal/write/', personal.views.write, name = 'write'),
+    path('personal/create/', personal.views.create, name = 'create'),
     path('accounts/', include('accounts.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
