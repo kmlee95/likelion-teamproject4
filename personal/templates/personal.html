@@ -17,7 +17,9 @@
         <h4>개인 저장용</h4>
     </h1>
     <!-- Project One -->
+
     {% for personal in personals.all %}
+    {% if user.username != personals.author %}
     <div class="card">
         <div class="row">
             <div class="col-md-5"> 
@@ -27,9 +29,13 @@
                 <h3>{{ personal.title }}</h3>
                 <p>{{ personal.summary }}</p>
                 <a class="btn btn-primary" href="{% url 'detail' personal.id %}">자세히 보기</a>
+                <p>작성자 : {{ personal.author }}</p>
+                <p>현재 로그인 사용자 : {{ user.username }}</p>
             </div>
         </div>
     </div>
+    {% else %}
+    {% endif %}
     <br>
     <br>
     {% endfor %}

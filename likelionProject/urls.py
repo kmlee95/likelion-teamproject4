@@ -19,6 +19,7 @@ urlpatterns = [
     path('personal/write/', personal.views.write, name = 'write'),
     path('personal/create/', personal.views.create, name = 'create'),
     path('accounts/', include('accounts.urls')),
+
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
