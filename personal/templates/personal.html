@@ -13,14 +13,16 @@
 
 <div class="container">
     <!-- Page Heading -->
-    <h1 class="my-4">Personal Page
-        <h4>개인 저장용</h4>
-        <a href="{% url 'write' %}" class="btn btn-outline-dark" role="button" aria-pressed="true">글쓰기</a>       
-        <br><br>
-    </h1>
+        <h1 class="my-4">
+            <div class="alert alert-light" role="alert">
+                <h3>PERSONAL 🐶 🐱</h3>
+            </div>
+            <a class="alert alert-light" href="{% url 'write' %}" role="button">글쓰기</a>
+            <br>
+        </h1>
 
     <!-- Project One -->
-    {% for personal in personals.all %}
+    {% for personal in posts %}
     <div class="card">
         <div class="row">
             <div class="col-md-5">
@@ -31,19 +33,36 @@
             <div class="col-md-7">
                 <br><br>
                 <h3>{{ personal.title }}</h3>
-                
                 <h6>{{ personal.pub_date }}</h6>
                 <br>
                 <p>{{ personal.summary }}</p>
                 <br><br>
                 <a href="{% url 'detail' personal.id %}" class="stretched-link">자세히 보기</a>
-
             </div>
         </div>
-    </div>
-    <br>
-    <br>
+    </div><br><br>
     {% endfor %}
+
+
+    <!--Pagination-->
+    {%if posts.has_previous%}
+    <!--<a class="alert alert-light" href="?page=1" role="button">첫 페이지</a>-->
+    <a class="alert alert-light" href="?page={{posts.previous_page_number}}" role="button">이전 페이지</a>
+    {%endif%}
+
+
+    <a class="alert alert-light">
+        <span>{{posts.number}}</span>
+        <span> / </span>
+        <span>{{posts.paginator.num_pages}}</span>
+    </a>
+
+
+    {%if posts.has_next%}
+    <a class="alert alert-light" href="?page={{posts.next_page_number}}" role="button">다음 페이지</a>
+    <!--<a class="alert alert-light" href="?page={{posts.paginator.num_pages}}" role="button">마지막 페이지</a>-->
+    {%endif%}
+    <br><br><br>
 
 </div>
 {% endblock %}
