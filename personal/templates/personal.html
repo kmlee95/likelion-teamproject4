@@ -21,26 +21,28 @@
 
     <!-- Project One -->
     {% for personal in personals.all %}
+    {% if user.username != personals.author %}
     <div class="card">
         <div class="row">
             <div class="col-md-5">
-                <img class="img-fluid rounded mb-3 mb-md-0"
-                    style="width:100%; max-width:300px; height:100%; max-height:300px;" src="{{personal.image.url}}"
-                    alt="">
+                <img class="img-fluid rounded mb-3 mb-md-0" style="width:100%; max-width:500px; height:100%; max-height:300px;" src="{{personal.image.url}}" alt="">
             </div>
             <div class="col-md-7">
-                <br><br>
+                <br>
                 <h3>{{ personal.title }}</h3>
-                
                 <h6>{{ personal.pub_date }}</h6>
                 <br>
                 <p>{{ personal.summary }}</p>
-                <br><br>
-                <a href="{% url 'detail' personal.id %}" class="stretched-link">자세히 보기</a>
+
+                <p>작성자 : {{ personal.author }}</p>
+                <p>현재 로그인 사용자 : {{ user.username }}</p>
+                <a class="btn btn-primary" href="{% url 'detail' personal.id %}">자세히 보기</a>
 
             </div>
         </div>
     </div>
+    {% else %}
+    {% endif %}
     <br>
     <br>
     {% endfor %}
