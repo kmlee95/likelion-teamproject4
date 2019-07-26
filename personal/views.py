@@ -1,13 +1,18 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Personal
+from django.core.paginator import Paginator
 
 
 def personal(request):
     personals = Personal.objects
-
+    personal_list = Personal.objects.all()
+    paginator = Paginator(personal_list, 3)
+    page = request.GET.get('page')
+    posts = paginator.get_page(page)
     return render(request, 'personal.html', {
         'personals': personals,
+        'posts': posts,
         'user': request.user
     })
 
