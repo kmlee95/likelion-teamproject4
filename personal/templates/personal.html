@@ -17,13 +17,14 @@
             <div class="alert alert-light" role="alert">
                 <h3>PERSONAL 🐶 🐱</h3>
             </div>
-            <a class="alert alert-light" href="{% url 'write' %}" role="button">글쓰기</a>
+            <a class="alert alert-light" href="{% url 'writePerson' %}" role="button">글쓰기</a>
             <br>
         </h1>
 
     <!-- Project One -->
 
     {% for personal in posts %}
+    {% if personal.author == request.user %}
     <div class="card">
         <div class="row">
             <div class="col-md-5">
@@ -35,9 +36,8 @@
                 <h6>{{ personal.pub_date }}</h6>
                 <br>
                 <p>{{ personal.summary }}</p>
-
+                
                 <p>작성자 : {{ personal.author }}</p>
-                <p>현재 로그인 사용자 : {{ user.username }}</p>
                 <a class="btn btn-primary" href="{% url 'detail' personal.id %}">자세히 보기</a>
 
             </div>
@@ -46,6 +46,8 @@
  
     <br>
     <br>
+    {% else %}
+    {% endif %}
     {% endfor %}
 
 

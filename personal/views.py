@@ -7,7 +7,7 @@ from django.core.paginator import Paginator
 def personal(request):
     personals = Personal.objects
     personal_list = Personal.objects.all()
-    paginator = Paginator(personal_list, 3)
+    paginator = Paginator(personal_list, 5)
     page = request.GET.get('page')
     posts = paginator.get_page(page)
     return render(request, 'personal.html', {
@@ -17,20 +17,27 @@ def personal(request):
     })
 
 
+def delete(request, personal_id):
+    personal = get_object_or_404(Personal, pk=personal_id)
+    personal.delete()
+    return redirect('/')
+
+
 def detail(request, personal_id):
     detail = get_object_or_404(Personal, pk=personal_id)
-    return render(request, 'detail.html', {'personal': detail})
+    return render(request, 'detail.html', {'personal': detail, 'personal_id': str(personal_id)})
 
 
-def write(request):
-    return render(request, 'write.html')
+def writePerson(request):
+    return render(request, 'writePerson.html')
 
 
-def create(request):
+def createPerson(request):
     photo = Personal()
     photo.title = request.POST['title']
     photo.image = request.FILES['image']
     photo.pub_date = timezone.datetime.now()
     photo.body = request.POST['body']
+    photo.author = request.user
     photo.save()
     return redirect('/personal')
