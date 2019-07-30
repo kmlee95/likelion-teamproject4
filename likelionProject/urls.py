@@ -15,7 +15,8 @@ urlpatterns = [
     path('animalShop/', animalShop.views.animalShop, name='animalShop'),
 
     path('personal/', personal.views.personal, name='personal'),
-    path('personal/delete/<int:personal_id>', personal.views.delete, name="delete"),
+    path('personal/delete/<int:personal_id>',
+         personal.views.delete, name="delete"),
     path('personal/<int:personal_id>/', personal.views.detail, name='detail'),
     path('personal/writePerson/', personal.views.writePerson, name='writePerson'),
     path('personal/createPerson/', personal.views.createPerson, name='createPerson'),
